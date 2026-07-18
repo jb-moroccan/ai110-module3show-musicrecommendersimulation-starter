@@ -125,7 +125,15 @@ def score_song(user_prefs: Dict, song: Dict) -> Tuple[float, List[str]]:
     energy_distance = abs(energy - target_energy)
     energy_score = max(0.0, 1.0 - energy_distance)
     score += energy_score
-    reasons.append(f"Energy score: {energy_score:.2f} based on proximity to your target energy")
+    if energy_score >= 0.8:
+        energy_match_text = "high match"
+    elif energy_score >= 0.5:
+        energy_match_text = "moderate match"
+    else:
+        energy_match_text = "low match"
+    reasons.append(
+        f"Energy score: {energy_score:.2f} ({energy_match_text}) based on proximity to your target energy"
+    )
 
     acousticness = song.get("acousticness", 0.0)
     acoustic_match = 1 if (likes_acoustic and acousticness >= 0.5) or (not likes_acoustic and acousticness < 0.5) else 0

@@ -79,18 +79,18 @@ You can add more tests in `tests/test_recommender.py`.
 Paste a sample of your recommender's output here as a text block so a reader can see what it produces:
 
 ```
-User profile: genre=pop, mood=happy, energy=0.8, likes_acoustic=True
+genre=pop, mood=happy, energy=0.8, likes_acoustic=False
 
-Top recommendations:
+Profile: High Energy Pop 
 
-Sunrise City - Score: 6.98
-Because: Genre matches your favorite genre; Mood matches your favorite mood; Energy score: 0.98 based on proximity to your target energy; Acousticness does not match your preference
+Sunrise City - Score: 7.98
+Because: Genre matches your favorite genre; Mood matches your favorite mood; Energy score: 0.98 (high match) based on proximity to your target energy; Acousticness matches your preference
 
-Gym Hero - Score: 4.87
-Because: Genre matches your favorite genre; Mood does not match your favorite mood; Energy score: 0.87based on proximity to your target energy; Acousticness does not match your preference
+Gym Hero - Score: 5.87
+Because: Genre matches your favorite genre; Mood does not match your favorite mood; Energy score: 0.87 (high match) based on proximity to your target energy; Acousticness matches your preference
 
-Rooftop Lights - Score: 2.96
-Because: Genre does not match your favorite genre; Mood matches your favorite mood; Energy score: 0.96based on proximity to your target energy; Acousticness does not match your preference
+Rooftop Lights - Score: 3.96
+Because: Genre does not match your favorite genre; Mood matches your favorite mood; Energy score: 0.96 (high match) based on proximity to your target energy; Acousticness matches your preference
 ```
 
 **Screenshot or video** *(optional)*: <!-- Insert a screenshot or demo video link here -->
@@ -106,6 +106,43 @@ Use this section to document the experiments you ran. For example:
 - How did your system behave for different types of users
 
 ---
+
+```
+Profile: High Energy Pop (genre=pop, mood=happy, energy=0.8, likes_acoustic=False)
+
+Sunrise City - Score: 7.98
+Because: Genre matches your favorite genre; Mood matches your favorite mood; Energy score: 0.98 (high match) based on proximity to your target energy; Acousticness matches your preference
+
+Gym Hero - Score: 5.87
+Because: Genre matches your favorite genre; Mood does not match your favorite mood; Energy score: 0.87 (high match) based on proximity to your target energy; Acousticness matches your preference
+
+Rooftop Lights - Score: 3.96
+Because: Genre does not match your favorite genre; Mood matches your favorite mood; Energy score: 0.96 (high match) based on proximity to your target energy; Acousticness matches your preference
+
+
+Profile: Deep Intense Rock (genre=rock, mood=intense, energy=0.9, likes_acoustic=False)
+
+Storm Runner - Score: 7.99
+Because: Genre matches your favorite genre; Mood matches your favorite mood; Energy score: 0.99 (high match) based on proximity to your target energy; Acousticness matches your preference
+
+Gym Hero - Score: 3.97
+Because: Genre does not match your favorite genre; Mood matches your favorite mood; Energy score: 0.97 (high match) based on proximity to your target energy; Acousticness matches your preference
+
+Midnight Parade - Score: 1.94
+Because: Genre does not match your favorite genre; Mood does not match your favorite mood; Energy score: 0.94 (high match) based on proximity to your target energy; Acousticness matches your preference
+
+
+Profile: Chill Lofi (genre=lofi, mood=chill, energy=0.4, likes_acoustic=True)
+
+Midnight Coding - Score: 7.98
+Because: Genre matches your favorite genre; Mood matches your favorite mood; Energy score: 0.98 (high match) based on proximity to your target energy; Acousticness matches your preference
+
+Library Rain - Score: 7.95
+Because: Genre matches your favorite genre; Mood matches your favorite mood; Energy score: 0.95 (high match) based on proximity to your target energy; Acousticness matches your preference
+
+Focus Flow - Score: 6.00
+Because: Genre matches your favorite genre; Mood does not match your favorite mood; Energy score: 1.00 (high match) based on proximity to your target energy; Acousticness matches your preference
+```
 
 ## Limitations and Risks
 
